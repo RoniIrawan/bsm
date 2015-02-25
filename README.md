@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Yii 2 Advanced Application Template
 ===================================
 
@@ -95,3 +96,7 @@ the installed application. You only need to do these once for all.
 
 To login into the application, you need to first sign up, with any of your email address, username and password.
 Then, you can login into the application with same email address and password at any time.
+=======
+# bsm67
+Enterprise System for BASAMA GROUP
+>>>>>>> d652a48adf87d04343eecde1a030fbdb81423302
