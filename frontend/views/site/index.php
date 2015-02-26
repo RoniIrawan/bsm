@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = 'My Yii Application';
+$this->title = 'Selamat datang di BSM 67';
 ?>
 <div class="site-index">
 

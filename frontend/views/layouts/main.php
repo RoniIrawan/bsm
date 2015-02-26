@@ -20,10 +20,12 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link rel="shortcut icon" href="<?php echo Yii::getAlias('@web'); ?>/favicon.ico" type="image/x-icon" />
 </head>
 <body>
     <?php $this->beginBody() ?>
     <div class="wrap">
+        <img src="<?php echo Yii::getAlias('@web'); ?>/banner.JPEG" alt="">        
         <?php
             NavBar::begin([
                 'brandLabel' => 'BASAMA',
@@ -34,6 +36,7 @@ AppAsset::register($this);
             ]);
             $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'Cek Stok', 'url' => ['/stok/index']],
                 ['label' => 'About', 'url' => ['/site/about']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
             ];
@@ -65,8 +68,9 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-left">&copy; BASAMA GROUP <?= date('Y') ?></p>
+        <!-- <p class="pull-right"><?= Yii::powered() ?></p> -->
+        <p class="pull-right">Developed by RONI</p>
         </div>
     </footer>
 

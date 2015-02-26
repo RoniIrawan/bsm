@@ -11,7 +11,10 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'components' => [
+    'components' => [        
+        'request' => [
+            'baseUrl' => '/bsm/',
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -27,6 +30,12 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+        'urlManager' => [
+            'baseUrl' => '/bsm/',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => []
         ],
     ],
     'params' => $params,
