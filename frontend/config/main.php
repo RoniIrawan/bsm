@@ -13,7 +13,7 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => [        
         'request' => [
-            'baseUrl' => '/bsm/',
+            'baseUrl' => '/bsm',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -32,7 +32,7 @@ return [
             'errorAction' => 'site/error',
         ],
         'urlManager' => [
-            'baseUrl' => '/bsm/',
+            'baseUrl' => '/bsm',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => []

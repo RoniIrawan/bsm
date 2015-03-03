@@ -68,9 +68,9 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left">&copy; BASAMA GROUP <?= date('Y') ?></p>
+        <p class="pull-left">Copyright &copy; <?= date('Y') ?> by <b style="color:blue;">BASAMA GROUP</b>. All Rights Reserved.</p>
         <!-- <p class="pull-right"><?= Yii::powered() ?></p> -->
-        <p class="pull-right">Developed by RONI</p>
+        <p class="pull-right"><b style="color:black;">JAVA SEVEN</b> | <b style="color:red;">CBR SIX</b> | <b style="color:purple;">BSM SOGA</b></p>
         </div>
     </footer>
 

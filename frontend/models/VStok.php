@@ -38,7 +38,7 @@ class VStok extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'kode' => 'Kode',
+            'kode' => 'Kode Barang',
             'size' => 'Size',
             'qty' => 'Qty',
         ];
