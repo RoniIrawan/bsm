@@ -35,9 +35,9 @@ AppAsset::register($this);
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'Beranda', 'url' => ['/site/index']],
                 ['label' => 'Cek Stok', 'url' => ['/stok/index']],
-                ['label' => 'About', 'url' => ['/site/about']],
+                ['label' => 'Tentang kami', 'url' => ['/site/about']],
                 // ['label' => 'Contact', 'url' => ['/site/contact']],
             ];
             if (Yii::$app->user->isGuest) {
@@ -59,6 +59,10 @@ AppAsset::register($this);
 
         <div class="container">
         <?= Breadcrumbs::widget([
+            'homeLink' => [ 
+                      'label' => Yii::t('yii', 'Beranda'),
+                      'url' => Yii::$app->homeUrl,
+            ],
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
@@ -68,7 +72,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left">Copyright &copy; <?= date('Y') ?> by <b style="color:blue;">BASAMA GROUP</b>. All Rights Reserved.</p>
+        <p class="pull-left">Copyright &copy; <?= date('Y') ?> | <b style="color:blue;">BASAMA GROUP</b>.</p>
         <!-- <p class="pull-right"><?= Yii::powered() ?></p> -->
         <p class="pull-right"><b style="color:black;">JAVA SEVEN</b> | <b style="color:red;">CBR SIX</b> | <b style="color:purple;">BSM SOGA</b></p>
         </div>

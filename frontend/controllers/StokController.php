@@ -8,6 +8,7 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\base\ErrorException;
 
 use frontend\models\VStok;
 
@@ -18,10 +19,9 @@ class StokController extends \yii\web\Controller
 	    $model = new VStok();
 	    if ($model->load(Yii::$app->request->post())) {
 	    	$model->load($_POST);
-	        if ($model->validate()) {	            
-	            // $model = VStok::find()->where(['LIKE', 'kode', $model->kode])->orderBy('size')->all();
-	            $model = VStok::find()->where(['kode'=>$model->kode])->orderBy('size')->all();
-				return $this->render('result', ['model'=>$model]);	            
+	        if ($model->validate()) {
+	    		$model = VStok::find()->where(['kode'=>$model->kode])->orderBy('size')->all();	    		
+				return $this->render('result', ['model'=>$model]);
 	        }
 	    }else{
 		    return $this->render('index', [

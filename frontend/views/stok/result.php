@@ -3,6 +3,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 $this->title = 'Hasil pencarian';
+$this->params['breadcrumbs'][] = ['label' => 'Cek Stok', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 $kode;
 ?>
@@ -10,6 +11,12 @@ $kode;
 <?php foreach($model as $row): ?>
 <?php $kode=$row->kode; ?>
 <?php endforeach; ?>
+
+<?php 
+if($model==null){
+	$kode="Kode tidak diketahui";
+} 
+?>
 
 <div class="row">
 	<div class="col-sm-6 col-md-6">
