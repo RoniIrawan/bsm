@@ -3,7 +3,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 $this->title = 'Hasil pencarian';
-$this->params['breadcrumbs'][] = ['label' => 'Cek Stok', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Cek Stok', 'url' => ['/stok/index']];
 $this->params['breadcrumbs'][] = $this->title;
 $kode;
 ?>

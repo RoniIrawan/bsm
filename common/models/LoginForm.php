@@ -43,7 +43,7 @@ class LoginForm extends Model
         if (!$this->hasErrors()) {
             $user = $this->getUser();
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Incorrect username or password.');
+                $this->addError($attribute, 'Nama pengguna atau password tidak sesuai.');
             }
         }
     }
@@ -74,5 +74,14 @@ class LoginForm extends Model
         }
 
         return $this->_user;
+    }
+
+    public function attributeLabels()
+    {
+        return [
+            'username' => 'Nama Pengguna',
+            'password' => 'Password',
+            'rememberMe' => 'Ingat saya'
+        ];
     }
 }

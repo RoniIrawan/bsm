@@ -22,13 +22,13 @@ class SignupForm extends Model
         return [
             ['username', 'filter', 'filter' => 'trim'],
             ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
+            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Nama pengguna sudah digunakan.'],
             ['username', 'string', 'min' => 2, 'max' => 255],
 
             ['email', 'filter', 'filter' => 'trim'],
             ['email', 'required'],
             ['email', 'email'],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
+            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Email sudah digunakan.'],
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
@@ -54,5 +54,15 @@ class SignupForm extends Model
         }
 
         return null;
+    }
+
+
+    public function attributeLabels()
+    {
+        return [
+            'username' => 'Nama Pengguna',
+            'email' => 'Email',
+            'password' => 'Password',
+        ];
     }
 }

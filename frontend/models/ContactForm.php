@@ -37,7 +37,11 @@ class ContactForm extends Model
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Verification Code',
+            'name' => 'Nama',
+            'email' => 'Email',
+            'subject' => 'Perihal',
+            'body' => 'Isi',
+            'verifyCode' => 'Kode Verifikasi',
         ];
     }
 
@@ -56,4 +60,5 @@ class ContactForm extends Model
             ->setTextBody($this->body)
             ->send();
     }
+
 }
