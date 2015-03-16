@@ -28,10 +28,10 @@ AppAsset::register($this);
         <img src="<?php echo Yii::getAlias('@web'); ?>/banner.JPEG" alt="">        
         <?php
             NavBar::begin([
-                'brandLabel' => 'BASAMA',
+                'brandLabel' => '<b style="color:white;">BASAMA</b>',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
+                    'class' => 'navbar navbar-custom navbar-fixed-top',
                 ],
             ]);
             $menuItems = [

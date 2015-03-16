@@ -26,20 +26,20 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'SYSTEM ADMIN',
+                'brandLabel' => '<b style="color:black;">BASAMA OFFICE</b>',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
+                    'class' => 'navbar navbar-default navbar-fixed-top',
                 ],
             ]);
             $menuItems = [
-                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'Dashboard', 'url' => ['/site/index']],
             ];
             if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                $menuItems[] = ['label' => 'Masuk', 'url' => ['/site/login']];
             } else {
                 $menuItems[] = [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                    'label' => 'Keluar (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ];
@@ -53,6 +53,10 @@ AppAsset::register($this);
 
         <div class="container">
         <?= Breadcrumbs::widget([
+            'homeLink' => [ 
+                      'label' => Yii::t('yii', 'Dashboard'),
+                      'url' => Yii::$app->homeUrl,
+            ],
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= $content ?>
@@ -61,8 +65,8 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-left">Copyright &copy; <?= date('Y') ?> | <b style="color:blue;">BASAMA GROUP</b>.</p>
+        <p class="pull-right">Developed by <b style="color:green;">RONI</b></p>
         </div>
     </footer>
 

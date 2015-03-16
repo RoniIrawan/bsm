@@ -8,11 +8,16 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
+    'language'=>'id',
+    'homeUrl' => '/bsm/bsmbackoffice',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
     'modules' => [],
-    'components' => [
+    'components' => [ 
+        'request' => [
+            'baseUrl' => '/bsm/bsmbackoffice',
+        ],       
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -28,6 +33,12 @@ return [
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
+        ],
+        'urlManager' => [
+            'baseUrl' => '/bsm/bsmbackoffice',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => []
         ],
     ],
     'params' => $params,

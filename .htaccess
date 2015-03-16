@@ -4,6 +4,7 @@ Options -Indexes
   RewriteEngine on
 
   RewriteCond %{REQUEST_URI} !^public
+  RewriteRule ^bsmbackoffice(/.+)?$ backend/web/$1 [L,PT]
   RewriteRule ^(.*)$ frontend/web/$1 [L] 
 </IfModule>
 
