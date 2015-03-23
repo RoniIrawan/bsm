@@ -31,7 +31,7 @@ AppAsset::register($this);
                 'brandLabel' => '<b style="color:white;">BASAMA</b>',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar navbar-custom navbar-fixed-top',
+                    'class' => 'navbar navbar-inverse navbar-fixed-top',
                 ],
             ]);
             $menuItems = [
