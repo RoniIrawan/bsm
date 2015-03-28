@@ -75,7 +75,7 @@ AppAsset::register($this);
         <div class="container">
         <p class="pull-left">Copyright &copy; <?= date('Y') ?> | <b style="color:blue;">BASAMA GROUP</b>.</p>
         <!-- <p class="pull-right"><?= Yii::powered() ?></p> -->
-        <p class="pull-right"><b style="color:black;">JAVA SEVEN</b> | <b style="color:red;">CBR SIX</b> | <b style="color:purple;">BSM SOGA</b></p>
+        <p class="pull-right"><b style="color:red;">JAVA SEVEN</b> | <b style="color:green;">CBR SIX</b> | <b style="color:yellow;">BSM SOGA</b></p>
         </div>
     </footer>
 
