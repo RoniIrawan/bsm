@@ -18,4 +18,4 @@ $this->params['breadcrumbs'][] = $this->title;
             <button type="submit" class="btn btn-danger">Proses</button>
         </div>
     </form>
-</div><!-- /.box -->
+</div><!-- /.box --> 
