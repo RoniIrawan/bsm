@@ -24,4 +24,15 @@ class DataController extends \yii\web\Controller
     	return $this->render('sogastok');
     }
 
+    public function actionImportjava()
+    {         
+        $model = new Javastok();
+        if ($model->load(Yii::$app->request->post())) {
+            $model->load($_POST);
+            if ($model->validate()) {
+                die('Yoooo');
+            }
+        }
+    }
+
 }
